@@ -42,16 +42,16 @@
         Привет Мир сука в Пятницу
     </div>
 
-    <script>
-        function playFridaySound() {
-            // Используем встроенный синтезатор речи Windows/Mac
-            const utterance = new SpeechSynthesisUtterance("Привет Мир сука в Пятницу");
-            utterance.lang = 'ru-RU';
-            utterance.rate = 1.0; // Скорость речи
-            utterance.pitch = 1.0; // Тональность
-            window.speechSynthesis.speak(utterance);
-        }
-    </script>
+<script>
+    function playFridaySound() {
+        // Запускаем файл, который лежит прямо в папке проекта
+        const audio = new Audio('friday.mp3');
+        
+        audio.play().catch(error => {
+            console.log("Кликни по экрану, чтобы включить звук:", error);
+        });
+    }
+</script>
 
 </body>
 </html>
