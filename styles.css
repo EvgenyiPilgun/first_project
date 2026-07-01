@@ -1,0 +1,21 @@
+  body {
+            background-color: lightblue;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        p {
+            font-family: verdana;
+            font-size: 20px;
+        }
+        /* -- -- --  */
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+            font-family: verdana;
+        }
