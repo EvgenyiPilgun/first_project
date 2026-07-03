@@ -39,37 +39,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная страница</title>
-    <style>
-        body {
-            background-color: #111;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: sans-serif;
-            overflow: hidden;
-        }
-        /* Анимация переливания цвета текста */
-        .animated-text {
-            font-size: 5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: linear-gradient(45deg, #ff007f, #ff00ff, #00ffff, #ff007f);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradient-move 4s ease infinite;
-            cursor: pointer;
-            user-select: none;
-            text-align: center;
-        }
-        @keyframes gradient-move {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-    </style>
+    <!-- Подключаем наш единый файл со стилями из папки styles -->
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 

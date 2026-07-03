@@ -1,21 +1,65 @@
-  body {
-            background-color: lightblue;
-        }
-        h1 {
-            color: white;
-            text-align: center;
-        }
-        p {
-            font-family: verdana;
-            font-size: 20px;
-        }
-        /* -- -- --  */
-        a {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 18px;
-            color: #333;
-            text-decoration: none;
-            font-family: verdana;
-        }
+body {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+/* Анимация переливания цвета текста */
+.animated-text {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff007f, #ff00ff, #00ffff, #ff007f);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 4s ease infinite;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+}
+
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ================================================== */
+/* Ниже начинаются новые стили специально для page2.html */
+/* ================================================== */
+
+/* Чтобы фон стал голубым только на второй странице, зададим класс для её body */
+body.page-two {
+    background-color: lightblue;
+    display: block;      /* Сбрасываем флексы первой страницы */
+    height: auto;
+    overflow: visible;
+    margin-top: 100px;
+}
+
+.page-two h1 {
+    color: white;
+    text-align: center;
+}
+
+.page-two p {
+    font-family: verdana;
+    font-size: 20px;
+    text-align: center; /* Чтобы текст параграфов тоже был по центру */
+}
+
+.page-two a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    font-family: verdana;
+}
